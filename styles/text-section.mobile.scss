@@ -1,0 +1,20 @@
+@use "./kit/mixins";
+
+@include mixins.media-sm {
+   .text-section {
+      padding-bottom: 116px;
+      &__title {
+         width: 100%;
+         margin-bottom: 41px;
+      }
+
+      &__description {
+         margin-bottom: 28px;
+      }
+
+      &__row {
+         @include mixins.grid(1, 24px);
+         margin-bottom: 24px;
+      }
+   }
+}

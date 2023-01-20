@@ -1,0 +1,37 @@
+$white-color: #fff;
+$white-color-70: rgba(255, 255, 255, 0.7);
+$white-color-40: rgba(255, 255, 255, 0.4);
+$dark-color: #464547;
+$light-grey-color: #666666;
+$btn-bg-color: #55C2D8;
+$play-btn-bg-color: #39C2D7;
+$body-bg-color: #EEEEEE;
+$video-section-bg: rgba(140, 79, 42, 0.3);
+
+$headers-image: './assets/stars.png';
+$video-image: './assets/video.jpg';
+$font-base-url: '/src/assets/fonts';
+
+@font-face {
+   font-family: 'SourseSansPro';
+   font-weight: 400;
+   src: url("#{$font-base-url}/SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+   font-family: 'SourseSansPro-Bold';
+   font-weight: 700;
+   src: url("#{$font-base-url}/SourceSansPro-Bold.ttf");
+}
+
+@font-face {
+   font-family: 'Oswald';
+   font-weight: 400;
+   src: url("#{$font-base-url}/Oswald-Regular.ttf");
+}
+
+@font-face {
+   font-family: 'Oswald-Bold';
+   font-weight: 600;
+   src: url("#{$font-base-url}/Oswald-Bold.ttf");
+}

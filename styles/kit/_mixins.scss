@@ -1,0 +1,40 @@
+@use "./variables";
+
+@mixin flex($align-items, $justify-content, $flex-direction) {
+   display: flex;
+   align-items: $align-items;
+   justify-content: $justify-content;
+   flex-direction: $flex-direction;
+}
+
+@mixin grid($column-count, $gap) {
+   display: grid;
+   grid-template-columns: repeat($column-count, 1fr);
+   gap: $gap;
+}
+
+@mixin bg-image($image-path, $height, $bg-color) {
+   height: $height;
+   @if $bg-color {
+      background-image: linear-gradient(variables.$video-section-bg, variables.$video-section-bg), url("#{$image-path}");
+   } @else {
+      background-image: url("#{$image-path}");
+   }
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+}
+
+@mixin transition-ease {
+   transition: all 1s ease-in-out;
+}
+
+@mixin uppercase {
+   text-transform: uppercase;
+}
+
+@mixin media-sm {
+   @media screen and (max-width: 650px) {
+      @content;
+   }
+}

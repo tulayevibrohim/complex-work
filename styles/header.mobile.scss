@@ -1,0 +1,8 @@
+@use './kit/mixins';
+
+@include mixins.media-sm {
+   .hero__title,
+   .hero__description {
+      width: max-content;
+   }
+}

@@ -1,0 +1,46 @@
+@use "./kit/mixins";
+@use "./kit/variables";
+
+.text-section {
+   padding: 66px 0 98px 0;
+   .container {
+      @include mixins.flex(center, center, column);
+   }
+   &__title {
+      font-size: 3rem;
+      line-height: 4rem;
+      font-family: 'Oswald-Bold';
+      text-align: center;
+      color: variables.$dark-color;
+      max-width: 670px;
+      margin-bottom: 39px;
+   }
+   &__description {
+      font-size: 1.5rem;
+      font-family: 'SourseSansPro';
+      text-align: center;
+      color: variables.$light-grey-color;
+      max-width: 426px;
+      margin-bottom: 45px;
+   }
+   &__row {
+      @include mixins.grid(2, 83px);
+      margin-bottom: 46px;
+   }
+   &__column {
+      color: variables.$light-grey-color;
+      line-height: 22px;
+      font-family: 'SourseSansPro';
+   }
+   &__btn {
+      font-size: 14px;
+      line-height: 26px;
+      letter-spacing: 10%;
+      color: variables.$white-color;
+      font-family: 'Oswald';
+      @include mixins.uppercase;
+      padding: 6px 18px;
+      border-radius: 18px;
+      background-color: variables.$btn-bg-color;
+   }
+}

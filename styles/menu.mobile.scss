@@ -1,0 +1,11 @@
+@use "./kit/mixins";
+
+@include mixins.media-sm {
+   .burger {
+      display: block;
+   }
+
+   .nav-menu {
+      display: none;
+   }
+}

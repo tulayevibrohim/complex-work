@@ -1,0 +1,53 @@
+@use "./kit/mixins";
+@use "./kit/variables";
+
+.navbar {
+   @include mixins.flex(center, space-between, row);
+   padding: 2.8125rem 0;
+   &__brand {
+      font-weight: 600;
+      font-size: 1.25rem;
+      font-family: 'SourseSansPro-Bold';
+      line-height: 1rem;
+      letter-spacing: 0.1em;
+      color: variables.$white-color;
+      @include mixins.uppercase;
+   }
+}
+
+.burger {
+   display: none;
+}
+
+.burger div {
+   width: 22px;
+   height: 3px;
+   background-color: variables.$white-color;
+   &:not(:last-child) {
+      margin-bottom: 5px;
+   }
+}
+
+.nav-menu__left {
+   @include mixins.flex(center, space-between, row);
+}
+
+.nav-menu {
+   margin-left: 10rem;
+   &__item {
+      display: inline-block;
+      font-family: 'SourseSansPro';
+      @include mixins.uppercase;
+      font-size: 0.875rem;
+      &.active {
+         border-bottom: 1px solid variables.$white-color;
+      }
+      &:not(:last-child) {
+         margin-right: 2rem;
+      }
+   }
+   &__link {
+      color: variables.$white-color-70;
+      padding-bottom: 6px;
+   }
+}

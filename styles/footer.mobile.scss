@@ -1,0 +1,21 @@
+@use './kit/mixins';
+
+@include mixins.media-sm {
+   .footer {
+      text-align: center;
+      &-container {
+         @include mixins.flex(center, center, column);
+      }
+      &-info {
+         @include mixins.flex(center, center, column);
+         &__item:first-child {
+            margin: 0 0 31px 0;
+         }
+   
+         &__adress,
+         &__email {
+            margin-bottom: 18px;
+         }
+      }
+   }
+}

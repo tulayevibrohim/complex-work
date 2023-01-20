@@ -1,0 +1,39 @@
+@use './kit/mixins';
+@use './kit/variables';
+
+.footer {
+   padding: 40px 0 74px 0;
+   background-color: variables.$dark-color;
+   color: variables.$white-color-40;
+   font-family: 'SourseSansPro';
+   &-container {
+      @include mixins.flex(flex-end, space-between, row);
+   }
+   &-info {
+      &__item:not(:last-child) {
+         margin-right: 80px;
+      }
+      @include mixins.flex(flex-start, center, row);
+      &__link {
+         color: variables.$white-color;
+         font-size: 18px;
+         line-height: 16px;
+         letter-spacing: 0.2em;
+         @include mixins.uppercase;
+         @include mixins.flex(center, center, row);
+      }
+      &__image {
+         width: 20px;
+         height: 20px;
+         margin-right: 16px;
+      }
+      &__address,
+      &__email {
+         color: variables.$white-color-40;
+         line-height: 19px;
+      }
+      &__address {
+         margin-bottom: 27px;
+      }
+   }
+}

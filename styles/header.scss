@@ -1,0 +1,34 @@
+@use "./kit/mixins";
+@use "./kit/variables";
+
+.main-header {
+   @include mixins.bg-image(variables.$headers-image, 100vh, $bg-color: false);
+   position: relative;
+}
+
+.hero {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   @include mixins.flex(center, center, column);
+   &__image {
+      margin-bottom: 0.8125rem;
+   }
+   &__title {
+      max-width: 376px;
+      font-size: 3rem;
+      line-height: 4rem;
+      color: variables.$white-color;
+      font-family: 'Oswald-Bold';
+      margin-bottom: 2.625rem;
+   }
+   &__description {
+      max-width: 426px;
+      color: variables.$white-color-70;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-family: 'SourseSansPro';
+   }
+}

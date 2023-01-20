@@ -1,0 +1,12 @@
+@use './base/base';
+@use './layout/container';
+@use './header.scss';
+@use './header.mobile.scss' as mobile-header;
+@use "./menu.scss";
+@use "./menu.mobile.scss" as mobile-menu;
+@use "./text-section.scss";
+@use "./text-section.mobile.scss" as text-section-mobile;
+@use "./video-section.scss";
+@use "./video-section.mobile.scss" as video-section-mobile;
+@use "./footer.scss";
+@use "./footer.mobile.scss" as footer-mobile;
